@@ -1,3 +1,5 @@
+# Build using sudo docker buildx build --platform linux/amd64,linux/arm64 -t marlinorg/nitro-cli:latest --push .
+
 # base image
 FROM --platform=$BUILDPLATFORM ubuntu AS builder-linux-amd64-linux-amd64
 ONBUILD ENV ARCH_LOWER=x86_64
