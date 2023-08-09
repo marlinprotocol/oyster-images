@@ -1,5 +1,9 @@
+# Build using sudo docker buildx build --platform linux/amd64,linux/arm64 -t marlinorg/enclave-builder:latest --push .
+
 # base image
 FROM marlinorg/nitro-cli
+
+ARG TARGETARCH
 
 # working directory
 WORKDIR /app
